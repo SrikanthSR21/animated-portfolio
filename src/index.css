@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-neon: #ccff00;
+    --color-neon-rgb: 204, 255, 0;
+    --color-dark: #080808;
+    --color-surface: #121212;
+    --color-border: #222222;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #080808;
+    color: #e5e5e5;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+/* 3D Transform Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ccff00;
+}
+
+/* Paper creases and textured overlays */
+.paper-shadow {
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.9),
+    0 20px 40px -15px rgba(0, 0, 0, 0.7),
+    0 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.paper-stack-shadow {
+  box-shadow: 
+    -10px 15px 35px -5px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.neon-glow {
+  box-shadow: 0 0 25px rgba(204, 255, 0, 0.25);
+}
+
+.neon-glow-strong {
+  box-shadow: 0 0 35px rgba(204, 255, 0, 0.5), 0 0 10px rgba(204, 255, 0, 0.8);
+}
+
+.neon-text-glow {
+  text-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
+}
